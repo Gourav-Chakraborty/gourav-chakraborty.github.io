@@ -372,7 +372,7 @@
             </div>
 
             <div class="communicate-section">
-                <h3 style="color: royalblue; font-size: 1.5rem; margin-bottom: 1.5rem;">Contact Directly:</h3>
+                <h3 style="color: royalblue; font-size: 1.5rem; margin-bottom: 1.5rem;">Communicate:</h3>
                 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                     <input type="hidden" name="access_key" value="ceda3971-793d-4d0c-ac14-f6817d3cc947">
                     <input type="hidden" name="subject" value="New message from your portfolio website!">
@@ -386,6 +386,9 @@
                         <textarea name="message" id="message" placeholder="Your Message" required maxlength="250" rows="5" class="form-control" oninput="updateCharCount()"></textarea>
                         <div class="char-counter" id="char-count">0 / 250 characters</div>
                     </div>
+                    
+                    <div class="h-captcha" data-captcha="true"></div>
+
                     <div class="form-buttons">
                         <button type="submit" class="btn btn-primary btn-click-anim" style="min-width: 120px;"><i class="fas fa-paper-plane"></i> Send</button>
                         <button type="button" class="btn btn-secondary btn-click-anim" style="min-width: 120px;" onclick="document.getElementById('contact-form').reset(); updateCharCount();"><i class="fas fa-trash"></i> Discard</button>
@@ -405,6 +408,7 @@
 
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
 <script>
